@@ -22,6 +22,9 @@ namespace AireSpringDemo
         
         readonly string OpenCorsPolicy = "corsPolicy";
         
+        
+        //The GetDBConnectionString method establishes the AWS System Manager Client
+        //The SSM Client is used to retrieve the Postgres RDS connection string from the SSM Parameter Store
         public static string GetDBConnectionString()
         {
  
@@ -64,7 +67,7 @@ namespace AireSpringDemo
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             
       
-            
+            //Establish the CORS Policy
             services.AddCors(options =>
             {
                 options.AddPolicy(OpenCorsPolicy,
@@ -76,6 +79,9 @@ namespace AireSpringDemo
                     });
             });
             
+            
+            //Setting up the Postgresql Database connection
+        
             services.AddDbContext<EmployeeDbContext>(options =>
                 options.UseNpgsql(GetDBConnectionString()));
 

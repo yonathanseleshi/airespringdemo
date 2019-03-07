@@ -5,6 +5,7 @@ using AireSpringDemo.Models;
 using AireSpringDemo.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace AireSpringDemo.Pages
 {
@@ -46,6 +47,12 @@ namespace AireSpringDemo.Pages
 
             //Assigning a globally unique id to the Employee 
             EmployeeObj.EmployeeId = new Guid();
+            
+            //Retrieve the Hire Year, Hire Month, and Hire Day and assign to the Hire Date property
+           DateTime hireDate = new DateTime(EmployeeObj.HireYear, EmployeeObj.HireMonth, EmployeeObj.HireDay);
+           
+            EmployeeObj.HireDate = hireDate;
+               
             
             //Call the repository PostEmployee method and pass the Employee object created by the form
             await _repo.PostEmployee(EmployeeObj);

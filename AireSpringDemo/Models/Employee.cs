@@ -22,9 +22,8 @@ namespace AireSpringDemo.Models
         [Required, MinLength(4), MaxLength(4)]
         private int hireYear;
         private DateTime hireDate;
-        
-        
 
+     
         public Employee(string firstName, string lastName, int phoneNumber, int zip, int hireDay, int hireMonth, int hireYear)
         {
             userID = new Guid();
@@ -75,6 +74,27 @@ namespace AireSpringDemo.Models
             get => hireDate;
             set => hireDate = value;
         }
+        public int HireDay
+        {
+            get => hireDay;
+            set => hireDay = value;
+        }
+
+        public int HireMonth
+        {
+            get => hireMonth;
+            set => hireMonth = value;
+        }
+
+        public int HireYear
+        {
+            get => hireYear;
+            set => hireYear = value;
+        }
+
+
+
+
 
         
         

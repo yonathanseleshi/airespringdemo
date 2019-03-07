@@ -1,5 +1,6 @@
 @page
-@model AireSpringDemo.Pages.Register
+@model AireSpringDemo.Pages.RegisterModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 
 @{
     Layout = null;
@@ -9,11 +10,22 @@
 
 <html>
 <head>
-    <title></title>
+    <title>Employee Registration</title>
 </head>
 <body>
-<div>
-    
-</div>
+<p>
+    <h2>Employee Registration Form</h2>
+</p>
+<div asp-validation-summary="All"></div>
+<form method="POST">
+    <div>First Name: <input asp-for="Employee.FirstName" /></div>
+    <div>Last Name: <input asp-for="Employee.LastName" /></div>
+    <div>Phone Number <input asp-for="Employee.PhoneNumber" /></div>
+    <div>Zipcode: <input asp-for="Employee.Zip" /></div>
+    <div>Hire Date: <input asp-for="Employee.HireDay" placeholder="DD" />
+        <input asp-for="Employee.HireMonth" placeholder="MM"/>
+        <input asp-for="Employee.HireYear" placeholder="YYYY"/></div>
+    <input type="submit" />
+</form>
 </body>
 </html>

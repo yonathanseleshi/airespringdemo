@@ -26,6 +26,10 @@
   "frameworks": {
     "netcoreapp2.2": {
       "dependencies": {
+        "AWSSDK.SimpleSystemsManagement": {
+          "target": "Package",
+          "version": "[3.3.41.1, )"
+        },
         "Microsoft.AspNetCore.App": {
           "suppressParent": "All",
           "target": "Package",
@@ -42,6 +46,10 @@
           "target": "Package",
           "version": "[2.2.0, )",
           "autoReferenced": true
+        },
+        "Npgsql.EntityFrameworkCore.PostgreSQL": {
+          "target": "Package",
+          "version": "[2.2.0, )"
         }
       },
       "imports": [

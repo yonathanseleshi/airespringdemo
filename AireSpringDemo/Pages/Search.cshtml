@@ -1,19 +1,28 @@
 @page
-@model AireSpringDemo.Pages.Search
+
+@using AireSpringDemo.Models
+@model AireSpringDemo.Pages.SearchModel
 
 @{
-    Layout = null;
+    Layout = "_Layout";
 }
 
 <!DOCTYPE html>
 
 <html>
 <head>
-    <title></title>
+    <title>List Users</title>
 </head>
 <body>
-<div>
-    
-</div>
+<form>
+    <p>
+        Title: <input type="text" asp-for="SearchString" />
+        <input type="submit" value="Search" />
+    </p>
+</form>
+@foreach (var employee in Model.Employees)
+{
+    @await Html.PartialAsync("_EmployeeData", (Employee) employee)
+}
 </body>
 </html>

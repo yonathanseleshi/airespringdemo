@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using AireSpringDemo.DAOs;
 using AireSpringDemo.Models;
+using AireSpringDemo.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
@@ -10,14 +11,16 @@ namespace AireSpringDemo.Pages
     {
         private readonly EmployeeDbContext _dbContext;
 
+        private IEmployeesRepo _repo;
 
         [BindProperty]
         public Employee Employee{ get; set; }
         
-        public RegisterModel(EmployeeDbContext context)
+        public RegisterModel(EmployeeDbContext context, IEmployeesRepo repo)
         {
+            this._repo = repo;
 
-            _dbContext = context;
+            this._dbContext = context;
         }
 
         public void OnGet()
@@ -33,8 +36,7 @@ namespace AireSpringDemo.Pages
                 return Page();
             }
 
-            _dbContext.Employees.Add(Employee);
-            await _dbContext.SaveChangesAsync();
+            await _repo.PostEmployee(Employee);
             return RedirectToPage("/Search");
         }
     }

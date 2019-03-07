@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AireSpringDemo.DAOs;
+using AireSpringDemo.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -14,6 +16,8 @@ namespace AireSpringDemo
 {
     public class Startup
     {
+        
+        readonly string OpenCorsPolicy = "corsPolicy";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -33,6 +37,25 @@ namespace AireSpringDemo
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            
+            services.AddEntityFrameworkNpgsql()
+                .AddDbContext<EmployeeDbContext>()
+                .BuildServiceProvider();
+            
+            services.AddCors(options =>
+            {
+                options.AddPolicy(OpenCorsPolicy,
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin()
+                            .AllowAnyHeader()
+                            .AllowAnyMethod();
+                    });
+            });
+
+
+            services.AddScoped<IEmployeesRepo, EmployeesRepoImpl>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,6 +72,7 @@ namespace AireSpringDemo
                 app.UseHsts();
             }
 
+            app.UseCors(OpenCorsPolicy); 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();

@@ -1,47 +1,58 @@
 using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Globalization;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Metadata;
 
 namespace AireSpringDemo.Models
 {
+    
+    [Table("Employees")]
     public class Employee
     {
 
-        private Guid userID;
+        
+        private Guid employeeId;
         [Required]
         private string firstName;
         [Required]
         private string lastName;
+        [Phone]
         private string phoneNumber;
         private int zip;
-        [Required, MaxLength(2), MinLength(2)]
+        [Required, MaxLength(2), MinLength(2), Range(1,31)]
         private int hireDay;
-        [Required, MaxLength(2), MinLength(2)]
+        [Required, MaxLength(2), MinLength(2), Range(1,12)]
         private int hireMonth;
-        [Required, MinLength(4), MaxLength(4)]
+        [Required, MinLength(4), MaxLength(4), Range(2000, 2019)]
         private int hireYear;
         private DateTime hireDate;
 
-     
+
+        public Employee()
+        {
+        }
+
         public Employee(string firstName, string lastName, int phoneNumber, int zip, int hireDay, int hireMonth, int hireYear)
         {
-            userID = new Guid();
+            employeeId = new Guid();
             this.firstName = firstName;
             this.lastName = lastName;
-            this.phoneNumber = $"{phoneNumber:(###) ###-####}";;
+            this.phoneNumber = string.Format("{0:(###) ###-####}", phoneNumber);;
             this.zip = zip;
             this.hireDay = hireDay;
             this.hireMonth = hireMonth;
             this.hireYear = hireYear;
-            String dateString = $"{hireMonth}/{hireDay}/{hireYear}";
-            string format = "MM/dd/yyyy";
-            this.hireDate = DateTime.ParseExact(dateString, format, CultureInfo.CurrentCulture);
+            
+            this.hireDate = new DateTime(hireYear, hireMonth, hireDay);
+         
+
         }
 
-        public Guid UserId
+        public Guid EmployeeId
         {
-            get => userID;
+            set => employeeId = value;
+            get => employeeId;
            
         }
 

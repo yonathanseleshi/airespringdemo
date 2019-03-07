@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AireSpringDemo", "AireSpringDemo\AireSpringDemo.csproj", "{8800E4E4-4CDB-44F9-9AB9-69A261C76065}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirespringDemoTests", "AirespringDemoTests\AirespringDemoTests.csproj", "{9538A7BB-764F-4ACD-8C6C-AD12F01655A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{8800E4E4-4CDB-44F9-9AB9-69A261C76065}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8800E4E4-4CDB-44F9-9AB9-69A261C76065}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8800E4E4-4CDB-44F9-9AB9-69A261C76065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9538A7BB-764F-4ACD-8C6C-AD12F01655A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9538A7BB-764F-4ACD-8C6C-AD12F01655A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9538A7BB-764F-4ACD-8C6C-AD12F01655A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9538A7BB-764F-4ACD-8C6C-AD12F01655A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

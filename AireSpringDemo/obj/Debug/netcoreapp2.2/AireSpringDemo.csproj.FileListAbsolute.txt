@@ -1,9 +1,3 @@
-/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/obj/Debug/netcoreapp2.2/AireSpringDemo.csprojAssemblyReference.cache
-/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/obj/Debug/netcoreapp2.2/AireSpringDemo.csproj.CoreCompileInputs.cache
-/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/obj/Debug/netcoreapp2.2/AireSpringDemo.RazorAssemblyInfo.cache
-/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/obj/Debug/netcoreapp2.2/AireSpringDemo.RazorAssemblyInfo.cs
-/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/obj/Debug/netcoreapp2.2/AireSpringDemo.AssemblyInfoInputs.cache
-/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/obj/Debug/netcoreapp2.2/AireSpringDemo.AssemblyInfo.cs
 /Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/bin/Debug/netcoreapp2.2/AireSpringDemo.deps.json
 /Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/bin/Debug/netcoreapp2.2/AireSpringDemo.runtimeconfig.json
 /Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/bin/Debug/netcoreapp2.2/AireSpringDemo.runtimeconfig.dev.json
@@ -11,6 +5,12 @@
 /Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/bin/Debug/netcoreapp2.2/AireSpringDemo.pdb
 /Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/bin/Debug/netcoreapp2.2/AireSpringDemo.Views.dll
 /Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/bin/Debug/netcoreapp2.2/AireSpringDemo.Views.pdb
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/obj/Debug/netcoreapp2.2/AireSpringDemo.csprojAssemblyReference.cache
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/obj/Debug/netcoreapp2.2/AireSpringDemo.csproj.CoreCompileInputs.cache
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/obj/Debug/netcoreapp2.2/AireSpringDemo.RazorAssemblyInfo.cache
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/obj/Debug/netcoreapp2.2/AireSpringDemo.RazorAssemblyInfo.cs
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/obj/Debug/netcoreapp2.2/AireSpringDemo.AssemblyInfoInputs.cache
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/obj/Debug/netcoreapp2.2/AireSpringDemo.AssemblyInfo.cs
 /Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/obj/Debug/netcoreapp2.2/AireSpringDemo.TagHelpers.input.cache
 /Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/obj/Debug/netcoreapp2.2/AireSpringDemo.TagHelpers.output.cache
 /Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AireSpringDemo/obj/Debug/netcoreapp2.2/AireSpringDemo.RazorCoreGenerate.cache

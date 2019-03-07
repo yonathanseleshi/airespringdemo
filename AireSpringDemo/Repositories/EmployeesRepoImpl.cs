@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AireSpringDemo.DAOs;
@@ -33,9 +34,21 @@ namespace AireSpringDemo.Repositories
 
         public async Task<Employee> PostEmployee(Employee employee)
         {
-            _dbContext.Employees.Add(employee);
+            
+            employee.EmployeeId = new Guid();
+
+            try
+            {
+                _dbContext.Employees.Add(employee);
            
-            await _dbContext.SaveChangesAsync();
+                await _dbContext.SaveChangesAsync();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            
 
             return employee;
 

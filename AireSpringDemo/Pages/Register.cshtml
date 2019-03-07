@@ -14,19 +14,74 @@
     <title>Employee Registration</title>
 </head>
 <body>
-<p>
-    <h2>Employee Registration Form</h2>
-</p>
-<div asp-validation-summary="All"></div>
-<form method="POST">
-    <div>First Name: <input asp-for="Employee.FirstName" /></div>
-    <div>Last Name: <input asp-for="Employee.LastName" /></div>
-    <div>Phone Number <input asp-for="Employee.PhoneNumber" /></div>
-    <div>Zipcode: <input asp-for="Employee.Zip" /></div>
-    <div>Hire Date: <input asp-for="Employee.HireDay" placeholder="DD" />
-        <input asp-for="Employee.HireMonth" placeholder="MM"/>
-        <input asp-for="Employee.HireYear" placeholder="YYYY"/></div>
-    <input type="submit" />
-</form>
+
+<div class="container">
+
+<div class="d-flex justify-content-center">
+  <div class="col-lg-10">
+
+
+       
+       
+      <form method="POST">
+          <div class="text-center form-group col-md-8">
+
+              <h2>Employee Registration Form</h2>
+          </div>
+
+          <div class="form-group col-md-8">
+              <label>First Name:</label>
+              <input class="form-control" maxlength="40" width="40" asp-for="EmployeeObj.FirstName"/>
+              <span asp-validation-for="EmployeeObj.FirstName"></span>
+          </div>
+
+          <div class="form-group col-md-8">
+              <label>Last Name</label>
+              <input class="form-control" maxlength="40" width="40" asp-for="EmployeeObj.LastName"/>
+              <span asp-validation-for="EmployeeObj.LastName"></span>
+          </div>
+
+          <div class="form-group col-md-4">
+              <label>Phone Number:</label>
+              <input class="form-control" maxlength="10" width="10" type="tel" asp-for="EmployeeObj.PhoneNumber"/>
+              <span asp-validation-for="EmployeeObj.PhoneNumber"></span>
+          </div>
+          <div class="form-group col-md-4">
+              <label>Zipcode:</label>
+              <input class="form-control" maxlength="5" width="5" asp-for="EmployeeObj.Zip"/>
+          </div>
+
+          <div class="form-group col-md-4">
+              <label>Hire Date:</label>
+              <div class="form-row">
+
+                  <div class="col">
+                      <input class="form-control" maxlength="2" width="2" asp-for="EmployeeObj.HireDay" placeholder="DD"/>
+                     
+                  </div>
+
+                  <div class="col">
+                      <input class="form-control" maxlength="2" width="2" asp-for="EmployeeObj.HireMonth" placeholder="MM"/>
+                     
+                  </div>
+
+                  <div class="col">
+                      <input class="form-control" maxlength="4" width="4" asp-for="EmployeeObj.HireYear" placeholder="YYYY"/>
+                  </div>
+              </div>
+              <span asp-validation-for="EmployeeObj.HireDay"></span>
+              <span asp-validation-for="EmployeeObj.HireMonth"></span>
+              <span asp-validation-for="EmployeeObj.HireYear"></span>
+          </div>
+          <div class="form-group col-sm">
+              <input class="btn btn-primary" type="submit"/>
+          </div>
+      </form>
+      
+     
+  </div>
+    </div>
+    </div>
+
 </body>
 </html>

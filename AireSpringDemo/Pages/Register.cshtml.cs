@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using AireSpringDemo.DAOs;
 using AireSpringDemo.Models;
@@ -14,7 +15,7 @@ namespace AireSpringDemo.Pages
         private IEmployeesRepo _repo;
 
         [BindProperty]
-        public Employee Employee{ get; set; }
+        public Employee EmployeeObj{ get; set; }
         
         public RegisterModel(EmployeeDbContext context, IEmployeesRepo repo)
         {
@@ -35,8 +36,11 @@ namespace AireSpringDemo.Pages
             {
                 return Page();
             }
+            
+            
 
-            await _repo.PostEmployee(Employee);
+            EmployeeObj.EmployeeId = new Guid();
+            await _repo.PostEmployee(EmployeeObj);
             return RedirectToPage("/Search");
         }
     }

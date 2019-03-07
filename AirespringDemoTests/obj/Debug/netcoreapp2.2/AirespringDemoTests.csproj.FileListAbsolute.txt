@@ -1,0 +1,14 @@
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AirespringDemoTests/bin/Debug/netcoreapp2.2/xunit.runner.visualstudio.dotnetcore.testadapter.dll
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AirespringDemoTests/bin/Debug/netcoreapp2.2/xunit.runner.reporters.netcoreapp10.dll
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AirespringDemoTests/bin/Debug/netcoreapp2.2/xunit.runner.utility.netcoreapp10.dll
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AirespringDemoTests/bin/Debug/netcoreapp2.2/AirespringDemoTests.deps.json
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AirespringDemoTests/bin/Debug/netcoreapp2.2/AirespringDemoTests.runtimeconfig.json
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AirespringDemoTests/bin/Debug/netcoreapp2.2/AirespringDemoTests.runtimeconfig.dev.json
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AirespringDemoTests/bin/Debug/netcoreapp2.2/AirespringDemoTests.dll
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AirespringDemoTests/bin/Debug/netcoreapp2.2/AirespringDemoTests.pdb
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AirespringDemoTests/obj/Debug/netcoreapp2.2/AirespringDemoTests.csprojAssemblyReference.cache
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AirespringDemoTests/obj/Debug/netcoreapp2.2/AirespringDemoTests.csproj.CoreCompileInputs.cache
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AirespringDemoTests/obj/Debug/netcoreapp2.2/AirespringDemoTests.AssemblyInfoInputs.cache
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AirespringDemoTests/obj/Debug/netcoreapp2.2/AirespringDemoTests.AssemblyInfo.cs
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AirespringDemoTests/obj/Debug/netcoreapp2.2/AirespringDemoTests.dll
+/Users/yonathanseleshi/Documents/DemoApps/AirespringDemo/AireSpringDemo/AirespringDemoTests/obj/Debug/netcoreapp2.2/AirespringDemoTests.pdb

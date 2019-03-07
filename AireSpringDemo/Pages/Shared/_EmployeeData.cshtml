@@ -3,10 +3,10 @@
 
 <div class="card">
     <div class="card-body">
-        <div>ID:@Model.UserId</div>
+        <div>ID:@Model.EmployeeId</div>
         <div>First Name:@Model.FirstName</div>
         <div>Last Name:@Model.LastName</div>
         <div>Phone Number: @Model.PhoneNumber</div>
-        <div>Hire Date: @Model.HireDate</div>
+        <div>Hire Date: @Html.Raw(@Model.HireDate.ToString("MM/dd/yyyy"))</div>
     </div>
 </div>

@@ -4,11 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using AireSpringDemo.DAOs;
 using AireSpringDemo.Repositories;
+using Amazon.SimpleSystemsManagement;
+using Amazon.SimpleSystemsManagement.Model;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -18,6 +21,27 @@ namespace AireSpringDemo
     {
         
         readonly string OpenCorsPolicy = "corsPolicy";
+        
+        public static string GetDBConnectionString()
+        {
+ 
+    
+
+
+            // Using UsWest2
+            var ssmClient = new AmazonSimpleSystemsManagementClient(Amazon.RegionEndpoint.USWest2);
+
+        
+            var response = ssmClient.GetParameterAsync(new GetParameterRequest
+            {
+                Name = "airespringendpoint",
+                WithDecryption = true
+            });
+
+            return response.Result.Parameter.Value;
+        }
+        
+        
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -28,6 +52,7 @@ namespace AireSpringDemo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -38,9 +63,7 @@ namespace AireSpringDemo
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             
-            services.AddEntityFrameworkNpgsql()
-                .AddDbContext<EmployeeDbContext>()
-                .BuildServiceProvider();
+      
             
             services.AddCors(options =>
             {
@@ -52,6 +75,10 @@ namespace AireSpringDemo
                             .AllowAnyMethod();
                     });
             });
+            
+            services.AddDbContext<EmployeeDbContext>(options =>
+                options.UseNpgsql(GetDBConnectionString()));
+
 
 
             services.AddScoped<IEmployeesRepo, EmployeesRepoImpl>();
